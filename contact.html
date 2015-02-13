@@ -91,20 +91,19 @@
 				<div id="logo">
 					<a href="index.html"><img  src="img/logo.png" alt="Simpler"></a>
 				</div>
-				
-				<!-- nav -->
+								<!-- nav -->
 				<ul id="nav" class="sf-menu">
-					<li><a href="index.html"><span>HOME</span></a></li>
+					<li class="current-menu-item"><a href="index.html">INICIO</a></li>
+					<li><a href="portfolio.html">PORTAFOLIO</a></li>
 					<li><a href="blog.html">BLOG</a></li>
-					<li><a href="page.html">ABOUT</a>
-						<ul>
-							<li><a href="page-elements.html">Elements</a></li>
-							<li><a href="page-icons.html">Icons</a></li>
-							<li><a href="page-typography.html">Typography</a></li>
+               		<li><a href="page.html">ACERCA</a>
+                        <ul>
+							<li><a href="page-elements.html">Elemento</a></li>
+							<li><a href="page-icons.html">Icono</a></li>
+							<li><a href="page-typography.html">Tipografía</a></li>
 						</ul>
 					</li>
-					<li><a href="portfolio.html">WORK</a></li>
-					<li  class="current-menu-item"><a href="contact.html">CONTACT</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
 				</ul>
 				<div id="combo-holder"></div>
 				<!-- ends nav -->
@@ -144,53 +143,53 @@
 				<div id="map-holder">
 					<div id="map_canvas"></div>
 					<div id="map-content">
-						<p><h3>LOCATION</h3></p>
+						<p><h3>LOCALIZACIÓN</h3></p>
 	        	
-						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p>El lugar donde me puedes ubicar <p>
 					</div>
 				</div>
 				
 				<!-- ENDS Map -->
 				
 				
-				<p><h3>CONTACT FORM</h3></p>
-				<p>Use this contact form to get in touch with us.</p>
-				<!-- form -->
+				<p><h3>HOJA DE CONTACTO</h3></p>
+				<p>Por favor, llene esta forma para mantenernos en contacto con usted.</p>
+				<!-- formam -->
 				<script type="text/javascript" src="js/form-validation.js"></script>
 				<form id="contactForm" action="#" method="post">
 					<fieldset>
 														
 						<p>
-							<label for="name" >Name</label>
-							<input name="name"  id="name" type="text" class="form-poshytip" title="Enter your full name" />
+							<label for="name" >Nombre</label>
+							<input name="name"  id="name" type="text" class="form-poshytip" title="Introduzca su nombre completo" />
 						</p>
 						
 						<p>
-							<label for="email" >Email</label>
-							<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
+							<label for="email" >Correo Electrónico</label>
+							<input name="email"  id="email" type="text" class="form-poshytip" title="Introduzca su correo electrónico" />
 						</p>
 						
 						<p>
-							<label for="web">Website</label>
-							<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />
+							<label for="web">Sitio Web</label>
+							<input name="web"  id="web" type="text" class="form-poshytip" title="Introduzca su sitio Web" />
 						</p>
 						
 						<p>
-							<label for="comments">Message</label>
-							<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>
+							<label for="comments">Descripción</label>
+							<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Introduzca sus comentarios"></textarea>
 						</p>
 						
 						<!-- send mail configuration -->
-						<input type="hidden" value="your@email.com" name="to" id="to" />
-						<input type="hidden" value="ENter the subject here" name="subject" id="subject" />
+						<input type="hidden" value="harold_burton@hotmail.com" name="to" id="to" />
+						<input type="hidden" value="From my web site" name="subject" id="subject" />
 						<input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" />
 						<!-- ENDS send mail configuration -->
 						
-						<p><input type="button" value="Send" name="submit" id="submit" /> <span id="error" class="warning">Message</span></p>
+						<p><input type="button" value="Enviar" name="submit" id="submit" /> <span id="error" class="warning">Message</span></p>
 					</fieldset>
 					
 				</form>
-				<p id="sent-form-msg" class="success">Form data sent. Thanks for your comments.</p>
+				<p id="sent-form-msg" class="success">Los datos han sido enviados satisfctoriamente, gracias por compartir sus comentarios.</p>
 				<!-- ENDS form -->				
 				
     		</div>
