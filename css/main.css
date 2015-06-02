@@ -708,6 +708,21 @@ Change widths as necessary
   }
 }
 
+p.rigth {
+    text-align: right;
+}
+
+p.left {
+    text-align: left;
+}
+
+p.center {
+    text-align: center;
+}
+
+p.justify {
+    text-align: justify;
+}
 /* WIDESCREEN */
 /* Increased body size for legibility */
 @media only screen and (min-width: 1400px) { 
