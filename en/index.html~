@@ -22,7 +22,12 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
   <script src="js/vendor/jquery.hashchange.min.js"></script>
   <script src="js/vendor/jquery.easytabs.min.js"></script>
+
   <script src="js/main.js"></script>
+  <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+      <![endif]-->
 </head>
   <body class="bg-fixed bg-1">
 <!--[if lt IE 7]>
@@ -30,10 +35,6 @@
     <![endif]-->
    <div class="main-container">
     <div class="main wrapper clearfix">
-        <div style="text-align: right;">
-            <a href="http://kickfliph.github.io/#about">ES</a> | <a href="http://kickfliph.github.io/en/#about">EN</a>
-        </div>
-      </span>
       <!-- Header Start -->
         <header id="header">
             <div id="logo">
@@ -41,7 +42,7 @@
                     Harold G Luzardo B
                 </h2>
                 <h4>
-                    Administrador de Sistemas de TI
+                    IT System Administrator
                 </h4>
             </div>
         </header>
@@ -51,42 +52,36 @@
           <!-- Tab List -->
             <ul class='etabs'>
                 <li class='tab' id="tab-about">
-                    <a href="#about"><i class="icon-user"></i><span> Acerca de Mi</span></a>
+                  <a href="#about"><i class="icon-user"></i><span> About Me</span></a>
                 </li>
                 <li class='tab'>
-                  <a href="#resume"><i class="icon-file-text"></i><span> Resumen</span></a>
+                  <a href="#resume"><i class="icon-file-text"></i><span> Resume</span></a>
                 </li>
                 <li class='tab'>
-                    <a href="#portfolio"><i class="icon-heart"></i><span> Portafolio</span></a>
+                  <a href="#portfolio"><i class="icon-heart"></i><span> Portfolio</span></a>
                 </li>
                 <li class='tab'>
-                    <a href="#seminars"><i class="icon-heart"></i><span> Seminarios</span></a>
-                </li>
-                <li class='tab'>
-                    <a href="#biografy"><i class="icon-heart"></i><span> biografía</span></a>
-                </li>
-                <li class='tab'>
-                  <a href="#contact"><i class="icon-envelope"></i><span> Contacto</span></a>
+                  <a href="#contact"><i class="icon-envelope"></i><span> Contact</span></a>
                 </li>
             </ul>
           <!-- End Tab List -->
             <div id="tab-data-wrap">
               <!-- About Tab Data -->
-              <div id="about">
+                <div id="about">
                     <section class="clearfix">
                         <div class="g2">
                             <div class="photo">
-                                <img src="https://photos.google.com/album/AF1QipPOInsdjOV9klB586MQK1aWNEYZRCJchX8QfPE0/photo/AF1QipPRonKWNb8q-SwqituevfqShY3N7K_og6rJXgiA" alt="Harold G Luzardo B">
+                                <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-frc1/582546_344156198979857_678123957_n.jpg" alt="Harold G Luzardo B">
                             </div>
                             <div class="info">
                                 <h2>
                                     Harold G Luzardo B
                                 </h2>
                                 <h4>
-                                    Administrador de Sistemas TI
+                                    IT System Administrator
                                 </h4>
                                 <p class="justify">
-                                   Instalación, configuración y administración de servicios y servidores usando GNU/Linux. 
+                                  Installation, configuration and management of servers and services using GNU/Linux. 
                                 </p>
                             </div>
                         </div>
@@ -94,19 +89,16 @@
                             <div class="main-links sidebar">
                                 <ul>
                                     <li>
-                                        <a href="#resume">Mi Resumen</a>
+                                        <a href="#resume">View My Resume</a>
                                     </li>
                                     <li>
-                                        <a href="#portfolio">Mi Portfolio</a>
+                                        <a href="#portfolio">My Portfolio</a>
                                     </li>
                                     <li>
-                                        <a href="#biografy">Mi Biografía</a>
+                                        <a href="#contact">Hire me for your next project</a>
                                     </li>
                                     <li>
-                                        <a href="#seminars">Seminarios y Eventos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#contact">Contrátame para tus próximos proyectos</a>
+                                        <a href="#features">Features</a>
                                     </li>
                                 </ul>
                             </div>
@@ -115,10 +107,10 @@
                         <div class="contact-info">
                           <div class="g1">
                             <div class="item-box clearfix">
-                              <i class="icon-linkedin"></i>
+                              <i class="icon-envelope"></i>
                               <div class="item-data">
-                                  <h3><a href="https://ve.linkedin.com/pub/harold-g-luzardo-b/ba/5b5/420"</a>Harold G Luzardo B</h3>
-                                  <p>Linkedin Profile</p>
+                                  <h3><a href="mailto:haroldburtonl@gmail.com">haroldburtonl@gmail.com</a></h3>
+                                <p>Email Address</p>
                               </div>
                             </div>
                           </div>
@@ -136,7 +128,7 @@
                               <i class="icon-twitter"></i>
                               <div class="item-data">
                                   <h3><a href="https://twitter.com/kickfliph">@kickfliph</a></h3>
-                                  <p>Twitter Handle</p>
+                                <p>Twitter Handle</p>
                               </div>
                             </div>
                           </div>
@@ -149,55 +141,20 @@
                     <section class="clearfix">
                         <div class="g2">
                             <h3>
-                                Experiencia Laboral
+                                Work Experience
                             </h3>
                             <ul class="no-list work">
-                                <li>
-                                    <h5>
-                                        Evolutionpos C.A
-                                    </h5><span class="label label-danger">2013-Present</span>
-                                    <p class="fulljustify">
-                                    Contratado para admimistrar toda plataforma web de la empresa. Se le implemtó una infraestrucctura de dos servidores  clusterisados corriendo Proxmox. Evolutionpos C.A es una empresa de desarrollo de Software ahora con un servidor GIT local. Podemos destacar otros servivios como:</p>
-                				      <ul class="inside">
-                    					 <li>Tomcat</li>
-                    					 <li>PostgreSQL</li>	
-					                     <li>Apache</li>
-                    					 <li>MySQL</li>
-                    					 <li>Samba</li>
-				                         <li>NFS</li>
-                    					 <li>Proxmox</li>
-                      					 <li>Bind 9</li>
-                    					 <li>Samba</li>	 
-                				       </ul> 
-                                    </p>
-                                </li>
-                                <li>
-                                    <h5>
-                                        Caf&eacute Venezuela S.A
-                                    </h5><span class="label label-info">2011-2013</span>
-                    				    <p>
-				                          <ul class="inside">
-                                              <li class="fulljustify">A cargo de la completa migración de Microsoft Windows a GNU/Linux incluyendo sus puestos de trabajo garantizando la operatividad de todos los dispositivos exsistentes</li>
-                                              <li class="fulljustify">Implemnetación completa de nuevo Cableado Estructurado en todas las areas de trabajo, así como también la red inanlámbrica, punto de acceso y enlances</li>
-                                              <li class="fulljustify">Implementación de un nuevo cuarto de servidores con todos los requerimientos de estandar international</li></p> 
-                                              <li class="fulljustify">Migratión de todo la plataforma administrativa, transpote y producción a un entorno web</li>
-                                              <li>Manejo y optimización de la VPN con las sedes remotas</li>
-                                              <li>Entrenamiento a los usuarios con el uso correto de GNU/Linux como escritorio</li>
-                                              <li>Implementación de Central telefónica IP con sus teléfonos</li>
-				                          </ul>
-                    				    </p>  
-                                </li>
                                 <li>
                                     <h5>
                                        CVA Cultivos Varios S.A
                                     </h5><span class="label label-info">2009-2010</span>
                                     <p>
-                				      <ul class="outside">
-                                          <li>Administrador de Sistemas TI , GNU/Linux Debian</li> 
-                                          <li>Implementado Instancias virtuales en OpenVZ</li> 
-                                          <li>Cableado Estructurado</li>
-                                          <li>Soporte Técnico</li>
-                				      </ul> 	
+				      <ul class="outside">
+					<li>IT System Administrator, GNU/Linux Debian administrator</li> 
+					<li>Deploying virtual instance OpenVZ</li> 
+					<li>Structured cabling</li>
+					<li>Technial support</li>
+				      </ul> 	
                                     </p>
                                 </li>
                                 <li>
@@ -205,22 +162,56 @@
                                         Pombo Colatoni 
                                     </h5><span class="label label-info">2010-2011</span>
                                     <p>
-				                      <ul class="outside">
-                                          <li class="fulljustify">Contratdo para impmentar un sistema de video vigilancia Inalambrica usando camaras IP en las ciudades Ocumare del Tuy y Santa Lucia</li> 
-                                          <li class="fulljustify">Implementación de servidores GNU/lInux Debian con servicios como: Samba, NFS, Squid3, apache2</li>
-                				      </ul>
+				      <ul class="outside">
+					<li>Hired to deploy wireless IP cameras on the Ocumare del Tuy and Santa Lucia city</li> 
+				      </ul>
                                     </p>
                                 </li>
+                                <li>
+                                    <h5>
+                                        Caf&eacute Venezuela S.A
+                                    </h5><span class="label label-info">2011-2013</span>
+				    <p>
+				      <ul class="inside">
+				       <li>In charge of the whole platform migration from Microsoft Windows to GNU / Linux including workstations </li>
+				       <li>Full implementation of new structured cabling as well as wireless network</li>
+				       <li>Full implementation of a new computer room with all the requirements of international standards</li> 
+				       <li>Migration of all administrative platform , production and transport to a web environment</li>
+				       <li>Manage and optimize VPN service</li>
+				       <li>Training users in GNU / Linux desktop</li>
+				      </ul>
+				    </p>  
+                                </li>
+                                <li>
+                                    <h5>
+                                        Evolutionpos C.A
+                                    </h5><span class="label label-danger">2013-Present</span>
+                                    <p>
+				    Hired to administrate entire web platform Evolutionpos company has a infraestrucctura two clustered servers running Proxmox . Since the company focuses on the development of software, a local server GIT was implemented . We can highlight other services as:	
+				      <ul class="inside">
+					 <li>Tomcat</li>
+					 <li>PostgreSQL</li>	
+					 <li>Apache</li>
+					 <li>MySQL</li>
+					 <li>Samba</li>
+				         <li>NFS</li>
+					 <li>Proxmox</li>
+					 <li>Bind 9</li>
+					 <li>Samba</li>	 
+				       </ul> 
+                                    </p>
+                                </li>
+                            </ul>
                             <h3>
-                                Educación
+                                Education
                             </h3>
                             <ul class="no-list work">
                                 <li>
                                     <h5>
-                                       Universidad Politecica Territorial "Kleber Ramirez"
+                                       Universidad Politecica Territorial "Klever Ramirez"
                                     </h5><span class="label label-success">2014-2016</span>
                                     <p>
-                                       Título: Ingeniero de Información en Tecnologías Libres
+                                       Degree: Information Technology Engineer
                                     </p>
                                 </li>
                                 <li>
@@ -228,13 +219,18 @@
                                         Universidad Centro Occidental "Lisandro Alvarado"
                                     </h5><span class="label label-warning">2002-2006</span>
                                     <p>
-                                       Título: Analista de Sistemas
+                                       Degree: System Analist
+				    </p>
+				    <p>   
+				       Field of Study: Systems Engineering
                                     </p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="g1">
                             <div class="sidebar">
                                 <h3>
-                                    Habilidades
+                                    Skills
                                 </h3>
                                 <h5>
                                     Software
@@ -262,7 +258,7 @@
                                 </div>
                                 <div class="break"></div>
                                 <h5>
-                                    Diseño
+                                    Design
                                 </h5>
                                 <div class="meter emerald">
                                     <span style="width: 40.8%"><span>Gimp</span></span>
@@ -272,12 +268,12 @@
                                 </div>
                                 <div class="break"></div>
                                 <h5>
-                                    Lenguajes de Programación
+                                    Programming Language
                                 </h5>
                                 <div class="meter emerald">
                                     <span style="width: 65.3%"><span>HTML/CSS</span></span>
                                 </div>
-                				 <div class="meter pomengrate">
+				 <div class="meter pomengrate">
                                     <span style="width: 20%"><span>Perl</span></span>
                                 </div>
                                 <div class="meter carrot">
@@ -286,27 +282,6 @@
                                 <div class="meter asbestos">
                                     <span style="width: 35%"><span>Python</span></span>
                                 </div>
-                                <div class="break"></div>
-                                <h5>
-                                    CMS
-                                </h5>
-                                <div class="meter sunflower">
-                                    <span style="width: 55%"><span>WordPress</span></span>
-                                </div>
-                                <div class="meter wisteria">
-                                    <span style="width: 60%"><span>Moodle</span></span>
-                                </div>
-                                <div class="break"></div>
-                                <h5>
-                                    Idiomas
-                                </h5>
-                                <div class="meter emerald">
-                                    <span style="width: 95%"><span>Español</span></span>
-                                </div>
-                                <div class="meter midnight">
-                                    <span style="width: 90%"><span>Ingles</span></span>
-                                </div>
-                                <div class="break"></div>
                             </div>
                         </div>
                     </section>
@@ -376,100 +351,12 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </section>
                 </div>
               <!-- End Portfolio Data -->
               <!-- Contact Tab Data -->
-              <div id="seminars">
-                    <section class="clearfix">
-
-                        <div class="g2">
-                            <h3>
-                                Seminarios y Eventos
-                            </h3>
-                            <h5>
-                                Seminarios UPTM
-                            </h5>
-                            <ul class="no-list work">
-                                <li>
-                                    <ul class="inside"> 
-                                        <h6>Auto Biogfrafía<span class="label label-info">2014</span></h6>
-                                        <p class="fulljustify">
-                                                     Impartido por el Proesor "XXXXXXXXXXX" el seminaro de Auto Biografía es una catedra que nos enseña la correcta creación de nuestra Biografía. Los errores comunes cometidos por 
-                                                     nosotros estudiantes fueron bien aclaradas en estas horas de inducción. Considero que esta es una de las mas dificiles cátedras para ser desarrolladas, ya que es muy complejo
-                                                     representase a uno mismo con una auto crítica y exponer cosas personales al público.
-                                        </p>
-                                    </ul>
-                                </li>
-                             </ul>
-                             <h5>
-                                 Seminarios Comunidad de Aprendizaje
-                             </h5>
-                            <ul class="no-list work">
-                                <li>
-                                    <ul class="inside"> 
-                                        <h6>GIT<span class="label label-info">2015</span></h6>
-                                        <p class="fulljustify">
-                                                     Dado que somos parte de la Comunidad de Tecnologías Libres de Información el desarrollo de Software es una acción de día a para todos nosotros. GIT nos permite llever el paso
-                                                     de lo que hacemos, además de trabajo colaborativo sin poerder información alguna perminitiendonos viajer hacia atrás o adelante el tiempo del desarrollo que estemos haciendo.
-                                                     El Ing. Jesús Contreras fué el encargado de impartir las horas de ese seminario, aprendiendo así las buenas prácticas de Programación.
-                                        </p>
-                                    </ul>
-                                    <ul class="inside"> 
-                                        <h6>Django<span class="label label-info">2015</span></h6>
-                                        <p class="fulljustify">
-                                                     En este seminario se aprendió el uso de Django que es un framework que no permite desarrollar cualquier tipo de proytecto utilizando Python como lenguaje base. Este es uno de los 
-                                                     Lenguajes de programación con mas auge en la actualidad por su gran versatilidad y alcanse escalable. es por eso que Orlando Fiol nuestro tutor de este seminario nos enseña las 
-                                                     bondades de esta plataforma.
-                                        </p>
-                                    </ul>
-                                </li>
-                            </ul>
-                             <h5>
-                                 Eventos
-                             </h5>
-                             <ul class="no-list work">
-                                <li>
-                                    <ul class="inside"> 
-                                     <h6>FLISOL <span class="label label-info">2005-Presente</span></h6>
-                                      <p class="fulljustify">
-                                                     Festival Latinoamericano de Instalación de Software Libre se selebra el 3er sábado de Abril conjuntamente todos los paises de Latinoamerica. Paticipo ativamente con <a href="http://www.gusl.org.ve"> GUSL </a>(Grupo de Usuarios de Software Libre Lara)
-                                                    organizando este evento desde el 2005 hasta el día de hoy. 
-                                      </p>
-                                    </ul>
-                                </li>
-                             </ul>
-                        </div>     
-                        <div class="g1">
-                            <div class="main-links sidebar">
-                                <ul>
-                                    <li>
-                                        <a href="#uptm">Seminarios UPTM</a>
-                                    </li>
-                                    <li>
-                                        <a href="#aprendizaje">Seminairios Comunidad de Aprendizaje</a>
-                                    </li>
-                                    <li>
-                                        <a href="#eventos">Eventos</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section><!-- content -->
-                </div>
-              <!-- End Seminars Tab Data -->
-              <!-- Resume Tab Data -->
-
-              <div id="biografy">
-                    <section class="clearfix">
-                       <div class="g2">
-                           <h4>Mi Biografía</h4>
-                       </div>
-                       <div class="g1"></div>
-                    </section>
-                </div>
-              <!-- End Contact Data -->
-              <div id="contact">
+                <div id="contact">
                     <section class="clearfix">
                        <div class="g1">
                          <div class="sny-icon-box">
@@ -477,7 +364,7 @@
                               <i class="icon-globe"></i>
                             </div>
                             <div class="sny-icon-content">
-                                <h4>Mi Dirección</h4>
+                              <h4>My Address</h4>
                               <p>Urb. La Pastore&ntildea Edf-5-3-3 </p>
                             </div>
                          </div>
@@ -488,8 +375,8 @@
                               <i class="icon-phone"></i>
                             </div>
                             <div class="sny-icon-content">
-                                <h4>Número Celular</h4>
-                              <p>+58 4145188728</p>
+                              <h4>Mobile Number</h4>
+                              <p>+58-4145188728<br/>+58-9349891</p>
                             </div>
                          </div>
                        </div>
@@ -499,8 +386,8 @@
                               <i class="icon-user"></i>
                             </div>
                             <div class="sny-icon-content">
-                                <h4>Acerca de Mi</h4>
-                                <p>Llámame, Siempre estoy listo para nuevos proyectos y retos.</p>
+                              <h4>About Me</h4>
+                              <p>Call me, I'm always ready for new proyects and challenges</p>
                             </div>
                          </div>
                        </div>

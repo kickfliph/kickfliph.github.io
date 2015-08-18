@@ -103,13 +103,6 @@ sup {top: -0.5em} /* Move superscripted text up */
 sub {bottom: -0.25em} /* Move subscripted text down */
 span.amp{font-family:Adobe Caslon Pro,Baskerville,"Goudy Old Style","Palatino","Palatino Linotype","Book Antiqua",Georgia,"Times New Roman",Times,serif;font-style:italic;font-size:110%;line-height:0;position:relative;vertical-align:baseline} /* Best available ampersand */
 
-/* Justify*/
-
-.fulljustify {
-    text-align:justify;
-}
-/* Justify*/
-
 /* MICRO CLEARFIX HACK */
 .cf:before, .cf:after {content:"";display:table} /* For modern browsers */
 .cf:after {clear:both}
@@ -125,7 +118,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 /* Wrapper */
 .main{
   padding-top: 50px;
-  max-width: 1130px;
+  max-width: 1020px;
 }
 .wrapper{
   margin: 0 auto;
@@ -679,12 +672,8 @@ Change widths as necessary
  .g1,.g2,.g3 {display:inline; float: left}
 
  /* 2 COLUMN GRID */
-/* .g1 {width:48.0%}
+ .g1 {width:48.0%}
  .g2 {width:48.0%}
- .g3 {width:98.0%}*/
-
- .g1 {width:27.0%}
- .g2 {width:66.0%}
  .g3 {width:98.0%}
 }
 
