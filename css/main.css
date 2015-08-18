@@ -116,7 +116,7 @@ span.amp{font-family:Adobe Caslon Pro,Baskerville,"Goudy Old Style","Palatino","
 .cf {zoom:1} /* For IE 6/7 (trigger hasLayout) */
 
 /* DEFAULT MOBILE STYLE */
-body {width: 92%; margin: 0 auto} /* Center page without wrapper */
+body {width: 96%; margin: 0 auto} /* Center page without wrapper */
 /* column grid */
 .g1,.g2,.g3{display:block; position: relative; margin-left: 1%; margin-right: 1%}
 /* 1 column grid */
@@ -125,7 +125,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 /* Wrapper */
 .main{
   padding-top: 50px;
-  max-width: 1130px;
+  max-width: 1195px;
 }
 .wrapper{
   margin: 0 auto;
@@ -216,7 +216,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   border-bottom: 0px;
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px 4px 0 0;
-  margin-right:10px; 
+  margin-right:1px; 
 }
 
 .tab a {
