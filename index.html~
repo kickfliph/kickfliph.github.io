@@ -315,46 +315,50 @@
               <!-- Portfolio Tab Data -->
                 <div id="portfolio">
                     <section class="clearfix">
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/1" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/1" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/2" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/2" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/3" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/3" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                             <h3>
-                                Certificados
+                                Insai
+                            </h3>
+                           <div class="break"></div>
+    			    <div class="g1">
+   				    <div class="image">
+                                <img src="./images/insai/falsefloor.jpg" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="./images/insai/falsefloor.jpg" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="image">
+                                <img src="./images/insai/falsefloor1.jpg" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="./images/insai/falsefloor1.jpg" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="image">
+                                <img src="./images/insai/computeroom.jpg" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="./images/insai/pomputeroom.jpg" clast="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+			<h3>
+    				    Certificados
                             </h3>
                         <div class="break"></div>
                         <div class="g1">
-                            <div>
+                            <div class="image">
                                 <img src="./images/certificate/jusol_640.png" alt="">
                                 <div class="image-overlay">
                                     <div class="image-link">
-                                        <a href="./images/certificate/jusol.png" class="btn">Este me lo otorgaron cuando era un tonto y no sabía nada de linux</a>
+                                        <a href="./images/certificate/jusol_640.png" class="btn">Este me lo otorgaron cuando era un tonto y no sabía nada de linux</a>
                                     </div>
                                 </div>
                             </div>
