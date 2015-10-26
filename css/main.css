@@ -615,6 +615,12 @@ body {width: 96%; margin: 0 auto} /* Center page without wrapper */
   -webkit-animation: none;
   background-image: none;
 }
+/* P */
+
+.midnight > p{
+  background-color: #2c3e50;
+}
+
 /* Footer */
 footer{
   text-align: center;
