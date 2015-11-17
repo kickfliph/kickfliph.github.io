@@ -67,7 +67,7 @@
                                 </h3>
                                 <p class="fulljustify">Dashboard.blackbox.org.ve es un sistema basado en web que permite al Administrador de Sistemas nonitorear, administrar y tomar deciciones sobre los servicios  y servidores a su cargo. Este software trata de entregar al administrador la independencia de resolver problemas en el sitio donde se encuentre sin estar limitado por el tiempo ni el espacio siempre y cuando tenga acceso a internet.</p>
                                 <h3>
-                                    Antecedentes
+                                    <a name="antecedentes">Antecedentes</a>
                                 </h3>
                                 <ul class="no-list work">
                                     <li>
@@ -102,7 +102,7 @@
                                     </ul>
                                    </li>
                                 </ul>
-                                <h3>Justificación</h3>
+                                <h3><a name="justificacion">Justificación</a></h3>
                                 <ul class="no-list work">
                                     <li>
                                         <ul class="inside">
@@ -140,57 +140,87 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h3>Implenentación</h3>
+                                        <h3><a name="implementacion">Implenentación</a></h3>
                                         <p class="fulljustify"fy>Django es un framework de desarrollo de aplicaciones web eficiente, versátil y evolucionando de forma dinámica. Cuando Django inicialmente ganó popularidad  la configuración recomendada para la ejecución de aplicaciones para Django se basaba en Apache con mod_wsgi, pero Django ha avanzado y en estos días la configuración recomendada es más eficiente y estable. Pero también más complejo e incluye herramientas tales como: Nginx, Gunicorn, virtualenv, supervisord y PostgreSQL. Voy a explicar cómo combinar todos estos componentes par que el servidor ejecute Django en GNUL/Linux Debian 8 ó la version estable hoy.</p>
                                         <ul class="inside">
                                             <li class="fulljustify"><b>Actualizar nuestro sistema:</b> Debemos estar seguro que nuestro sistema tiene al día todos los paquetes, asi evitamos errores futuros o conflictos de inconsistencia en los paquetes.</li></br>
-                                              <p> <code>$ sudo aptitude update</br>
-                                                        $ sudo aptitude upgrade</code><br></p>
+                                            <div class="meter midnight">
+                                                <span style="width: 100%"><span><code>$ sudo aptitude update</br>
+                                                            $ sudo aptitude upgrade</code></span></span>
+                                            </div>
                                             <li class="fulljustify"><b>PostgreSQL:</b> Usaremos una base de datos relacional. Esta va a llevar el control de los usuarios que tendrán acceso al sistema.</li></br>
-                                              <p> <code>$ sudo aptitude install postgresql postgresql-contrib</code></br></p>
+                                            <div class="meter midnight">
+                                                <span style="width: 100%"><span><code>$ sudo aptitude install postgresql postgresql-contrib</code></span></span>
+                                            </div>
                                               <p class="fulljustify">Creamos un usuario de base de datos y una nueva base de datos para la aplicación</p>
-                                              <p> <code>$ sudo su -  postgres</br>
-                                                postgres@blackbox:~$ createuser -i -P </br>
-                                                Enter name of role to add: webappsusr </br>
-                                                Enter password for new role: </br>
-                                                Enter it again:</br>
-                                                Shall the new role be a superuser? (y/n) n </br>
-                                                Shall the new role be allowed to create databases? (y/n) n </br>
-                                                Shall the new role be allowed to create more new roles? (y/n) n </br>
-                                                postgres@blackbox:~$ postgres@blackbox:~$ createdb --owner dashboardb webappsusr </br>
-                                                postgres@blackbox:~$ logout</code></br></p>
-                                            <li class="fulljustify"><b>Usuario para la aplicación:</b> Creamos un usuario para la aplicación, llamada dasboard.blackbox.org.ve  y lo asignaremos al grupo del sistema llamado webapps</li></br>
-                                            <p><code>$ sudo groupadd --system webapps </br>
-                                                $ sudo useradd --system --gid webapps --shell /bin/bash --home /var/www/webapps  webappsusr</code></br></p>
+                                            <div class="meter midnight">  
+                                                  <span style="width: 100%"><span><code>$ sudo su -  postgres</br>
+                                                    postgres@blackbox:~$ createuser -i -P </br>
+                                                    Enter name of role to add: webappsusr </br>
+                                                    Enter password for new role: </br>
+                                                    Enter it again:</br>
+                                                    Shall the new role be a superuser? (y/n) n </br>
+                                                    Shall the new role be allowed to create databases? (y/n) n </br>
+                                                    Shall the new role be allowed to create more new roles? (y/n) n </br>
+                                                    postgres@blackbox:~$ postgres@blackbox:~$ createdb --owner dashboardb webappsusr </br>
+                                                    postgres@blackbox:~$ logout</code></br><span>
+                                                  <span>
+                                            </div>
+                                                <li class="fulljustify"><b>Usuario para la aplicación:</b> Creamos un usuario para la aplicación, llamada dasboard.blackbox.org.ve  y lo asignaremos al grupo del sistema llamado webapps</li></br>
+                                                <div class="meter midnight"> 
+                                                    <span style="width: 100%"><span><code>$ sudo groupadd --system webapps </br>
+                                                            $ sudo useradd --system --gid webapps --shell /bin/bash --home /var/www/webapps  webappsusr</code></br></span></span>
+                                                </div>
                                             <p class="fulljustify">A pesar de que Django tiene un buen historial de seguridad, las aplicaciones web pueden llegar a ser comprometida. Si la aplicación tiene acceso limitado a los recursos en el servidor, el daño potencial también puede ser limitada. Sus aplicaciones web deben ejecutarse como usuarios del sistema con privilegios limitados</p>
-                                            <li class="fulljustify"><b>Virtualenv:</b> Es una herramienta que te permite crear ambientes Python separadas en su sistema. Esto le permite ejecutar aplicaciones con diferentes conjuntos de requisitos de forma concurrente. Esto lo que genera una jaula dentro de servidor obligando servicio ser administrado solo por un usuario. En nuestro caso  webappsusr.</li>
-                                            <p><code>$ sudo aptitude install python-virtualenv</code></br></p>
+                                            <li class="fulljustify"><b>Virtualenv:</b> Es una herramienta que te permite crear ambientes Python separadas en su sistema. Esto le permite ejecutar aplicaciones con diferentes conjuntos de requisitos de forma concurrente. Esto lo que genera una jaula dentro de servidor obligando servicio ser administrado solo por un usuario. En nuestro caso  webappsusr.</li></br>
+                                            <div class="meter midnight">
+                                                <span style="width: 100%"><span><code>$ sudo aptitude install python-virtualenv</code></br></span></span>
+                                            </div>
                                             <p class="fulljustify">Crear un directorio para almacenar nuestra aplicación en <em>/var/www/webapps/django</em> y cambiamos el dueño del directorio a su usuario de la aplicación webappsusr.</p>
-                                            <p><code>$ sudo mkdir -p /var/www/webapps/django/</br>
-                                                     $ sudo chown webappsusr /var/www/webapps/django/</code></br></p>
+                                            <div class="meter midnight">
+                                                <span style="width: 100%"><span><code>$ sudo mkdir -p /var/www/webapps/django/</br>
+                                                            $ sudo chown webappsusr /var/www/webapps/django/</code></br></span></span>
+                                            </div>
                                             <p>Creamos un entorno virtual de Python en el directorio de la aplicación</p>
-                                            <p><code>$ sudo su - webappsusr</br>
+                                            <div class="meter midnight">
+                                                <span style="width: 100%"><span><code>$ sudo su - webappsusr</br>
                                                 webappsusr@blackbox:~$ cd /var/www/webapps/django/ </br>
                                                 webappsusr@blackbox:~$ virtualenv . New python executable in django/bin/python Installing distribute..............done. Installing pip.....................done. </br>
                                                 webappsusr@blackbox:~$ source bin/activate</br> 
-                                                (django)webappsusr@blackbox:~$</code></br></p>
+                                                (django)webappsusr@blackbox:~$</code></br></span></span>
+                                            </div>
                                             <p>Su entorno está activado y se puede proceder a instalar Django </p>
-                                            <p><code>(django)webappsusr@blackbox:~$ pip install django Downloading/unpacking django (...) Installing collected packages: django (...) Successfully installed django Cleaning up... </br>
+                                            <div class="meter midnight">
+                                                <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ pip install django Downloading/unpacking django (...) Installing collected packages: django (...) Successfully installed django Cleaning up... </code></br></span></span>
+                                            </div>
                                                 <p class="fulljustify">Django  está listo para su uso. Seguir adelante y creamos nuestro proyecto dashboard.blackbox.org.ve</p>
-                                                <p><code>(django)webappsusr@blackbox:~$ django-admin.py startproject dashboard.blackbox.org.ve</code></br></p>
+                                                <div class="meter midnight">
+                                                    <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ django-admin.py startproject dashboard.blackbox.org.ve</code></br></span></span>
+                                                </div>
                                                 <p>Probamos ejecutando el servidor de desarrollo</p>
-                                                <p><code>(django)webappsusr@blackbox:~$ cd dashboard.blackbox.org.ve</br> 
-                                                    <p>(django)webappsusr@blackbox:~$ python manage.py runserver 0.0.0.0:8000 Validating models... 0 errors found Oct 24, 2015 - 06:12:00 Django version 1.8.4, using settings 'dashboard.blackbox.org.ve.settings' Development server is running at http://0.0.0.0:8000/ Quit the server with CONTROL-C.</p>
+                                                <div class="meter midnight">
+                                                    <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ cd dashboard.blackbox.org.ve</br>
+                                                                (django)webappsusr@blackbox:~$ python manage.py runserver 0.0.0.0:8000 Validating models... 0 errors found Oct 24, 2015 - 06:12:00 Django version 1.8.4, using settings 'dashboard.blackbox.org.ve.settings' Development server is running at http://0.0.0.0:8000/ Quit the server with CONTROL-C.</code></span></span>
+                                                </div>
                                                     <p>Ahora desde nuestro navegador web:</p>
-                                                    <p><em>http://dashboard.blackbox.org.ve:8000</em></br></p>
+                                                    <div class="meter carrot">
+
+                                                        <span style="width: 100%"><span><code>http://dashboard.blackbox.org.ve:8000</code></br></span></span>
+                                                    </div>
                                                     <li class="fulljustify"><b>Configurar PostgreSQL para trabajar con Django:</b> Para utilizar Django con PostgreSQL, necesitará instalar el <em>psycopg2</em> adaptador de base de datos en el entorno virtual. Este paso requiere la compilación de una extensión nativa (escrito en C). La compilación fallará si no puede encontrar los archivos de cabecera y las bibliotecas estáticas necesarias para vincular los programas en C con libpq (la biblioteca para la comunicación con Postgres) y módulos de construcción de Python python-dev paquete). Tenemos que instalar estos dos paquetes primero, entonces podemos instalar <em>psycopg2</em> usando <b>PIP</b>.</li>
                                                     <p>Instalar dependencias: </p>
-                                                    <p><code>$ sudo aptitude install libpq-dev python-dev </br>
-                                                        (django)webappsusr@blackbox:~$ pip install psycopg2 </code></br></p>
+                                                    <div class="meter midnight">
+                                                        <span style="width: 100%"><span><code>$ sudo aptitude install libpq-dev python-dev </br>
+                                                                    (django)webappsusr@blackbox:~$ pip install psycopg2 </code></br></span></span>
+                                                    </div>
                                                     <p>Ahora puede configurar la sección de bases de datos en su <em>settings.py</em></p>
-                                                    <p><code>(django)webappsusr@blackbox:~$ vim settings.py</code></p>
+                                                    <div class="meter midnight">
+                                                        <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ vim settings.py</code></span></span>
+                                                    </div>
                                                     <p>Ubicamos la linea a continuación dentro del archivo settings.py y lo sustituimos por:</p>
-                                                    <p><code>DATABASES = {</br>
+                                                    <div class="meter midnight">
+                                                        <span style="width: 100%"><span>
+                                                        <code>DATABASES = {</br>
                                                         'default': {</br>
                                                         'ENGINE': 'django.db.backends.postgresql_psycopg2',</br>
                                                         'NAME': 'blckboxdashbrd',</br>
@@ -198,18 +228,27 @@
                                                         'PASSWORD': '300398hk',</br>
                                                         'HOST': 'localhost',</br>
                                                         'PORT': '',                      # Set to empty string for default.</br>
-                                                        }</br>
+                                                        }</code></br></span></span>
+                                                    </div>
                                                         <p>Y, finalmente, la construcción de la base de datos inicial de dashboard.blackbox.org.ve</p>
-                                                        <p><code>(django)webappsusr@blackbox:~$ python manage.py syncdb <code></p>
+                                                        <div class="meter midnight">
+                                                            <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ python manage.py syncdb </code></span></span>
+                                                        </div>
                                                         <li class="fulljustify"><b>Gunicorn:</b> En producción no vamos a utilizar el servidor de desarrollo. Usaremos un servidor de aplicaciones dedicado llamado gunicorn.</li>
-
                                                         <p>Instalamos gunicorn en el entorno virtual de la aplicación: </p>
-                                                        <p><code>(django)webappsusr@blackbox:~$ pip install gunicorn Downloading/unpacking gunicorn Downloading gunicorn-0.17.4.tar.gz (372Kb): 372Kb downloaded Running setup.py egg_info for package gunicorn Installing collected packages: gunicorn Running setup.py install for gunicorn Installing gunicorn_paster script to /var/www/webapps/django/bin Installing gunicorn script to /var/www/webapps/django/bin Installing gunicorn_django script to /var/www/webapps/django/bin Successfully installed gunicorn Cleaning up...<code></br></p>
+                                                        <div class="meter midnight">
+                                                            <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ pip install gunicorn Downloading/unpacking gunicorn Downloading gunicorn-0.17.4.tar.gz (372Kb): 372Kb downloaded Running setup.py egg_info for package gunicorn Installing collected packages: gunicorn Running setup.py install for gunicorn Installing gunicorn_paster script to /var/www/webapps/django/bin Installing gunicorn script to /var/www/webapps/django/bin Installing gunicorn_django script to /var/www/webapps/django/bin Successfully installed gunicorn Cleaning up...</code></br></span></span>
+                                                        </div>
                                                         <p class="fulljustify">Ahora que  gunicorn está intalado, puede probarse para servir a la aplicación dashboard.blackbox.org.ve ejecutando el siguiente comando:</p>
-                                                            <p><code>(django)webappsusr@blackbox:~$ gunicorn dashboard.blackbox.org.ve.wsgi:application --bind 0.0.0.0:8001</code></br></p>
+                                                        <div class="meter midnight">
+                                                            <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ gunicorn dashboard.blackbox.org.ve.wsgi:application --bind 0.0.0.0:8001</code></br></span></span>
+                                                        </div>
                                                             <p class="fulljustify"> Ahora debería ser capaz de acceder al servidor Gunicorn de <em>http://dashboard.blackbox.org.ve:8001</em>. Así como está, usando los puertos 8000 y 8001 son a modo desarrollo o prueba. Gunicorn está instalado y listo para servir a nuestra aplicación. Vamos a establecer algunas opciones de configuración para que sea más útil. Estableceré una serie de parámetros, así que vamos a poner a todos en un script bash, que guardo como bin/gunicorn_start.</p>
-                                                            <p><code>(django)webappsusr@blackbox:~$ vim bin/guicorn_start</code></br><p>
-                                                            <p><code>#!/bin/bash </br>
+                                                            <div class="meter midnight">
+                                                                <span style="width: 100%"><span><code>(django)webappsusr@blackbox:~$ vim bin/guicorn_start</code></br></span></span>
+                                                            </div>
+                                                                <div class="meter midnight">
+                                                                    <span style="width: 100%"><span><code>#!/bin/bash </br>
                                                                 NAME="dashboard.blackbox.org.ve"                                  # Nombre de la aplicación</br>
                                                                 DJANGODIR=/var/www/webapps/django/dashboard.blackbox.org.ve             # Directorio de la aplicación</br>
                                                                 SOCKFILE=/var/www/webapps/django/run/gunicorn.sock  # nos comunicaremos con él usando este socket unix </br>
@@ -231,45 +270,58 @@
                                                                 RUNDIR=$(dirname $SOCKFILE)</br>
                                                                 test -d $RUNDIR || mkdir -p $RUNDIR</br>
 
-                                                                # Activar el Gunicorn</br>
-                                                                # Programas que deben correr bajo supervisor, no deberán ser demonizados (no utilizar --demonios)</br>
-                                                                exec ../bin/gunicorn ${DJANGO_WSGI_MODULE}:application \</br>
-                                                                --name $NAME \ </br>
-                                                                --workers $NUM_WORKERS \ </br>
-                                                                --user=$USER --group=$GROUP \ </br>
-                                                                --bind=unix:$SOCKFILE \ </br>
-                                                                --log-level=debug \ </br>
-                                                                <p>Establezca el bit de ejecución en el gunicorn_start script: </p>
-                                                                <p><code>$ sudo chmod u+x bin/gunicorn_start <sudo></br></p>
-                                                                <p>Probamos gunicorn_start  ejecutándolo como el usuario webappsusr</p>
-                                                                <p><code>$ sudo su - webappsusr </code></br></p>
-                                                                <p><code>webappsusr@blackbox:~$ bin/gunicorn_start </code></br><p>
+                                                            # Activar el Gunicorn</br>
+                                                            # Programas que deben correr bajo supervisor, no deberán ser demonizados (no utilizar --demonios)</br>
+                                                            exec ../bin/gunicorn ${DJANGO_WSGI_MODULE}:application \</br>
+                                                            --name $NAME \ </br>
+                                                            --workers $NUM_WORKERS \ </br>
+                                                            --user=$USER --group=$GROUP \ </br>
+                                                            --bind=unix:$SOCKFILE \ </br>
+                                                            --log-level=debug \ </code></br></span></span>
+                                                            </div>
+                                                            <p>Establezca el bit de ejecución en el gunicorn_start script: </p>
+                                                            <div class="meter midnight">
+                                                                <span style="width: 100%"><span><code>$ sudo chmod u+x bin/gunicorn_start </code></br></span></span>
+                                                            </div>
+                                                            <p>Probamos gunicorn_start  ejecutándolo como el usuario webappsusr</p>
+                                                            <div class="meter midnight">
+                                                                <span style="width: 100%"><span><code>$ sudo su - webappsusr </code></br>
+                                                                        webappsusr@blackbox:~$ bin/gunicorn_start</br></span></span>
+                                                            </div>
+                                                            <li class="fulljustify"><b>Supervisor:</b> gunicorn_start script está listo y funcionando. Tenemos que asegurarnos de que se inicie automáticamente con el sistema y que se puede reiniciar automáticamente si por alguna razón se cierra inesperadamente. Estas tareas pueden ser fácilmente manejados por un servicio llamado supervisord. La instalación es sencilla:</li></br>
+                                                            <div class="meter midnight">
+                                                                <span style="width: 100%"><span><code>$ sudo aptitude install supervisor </code></br></span></span>
+                                                            </div>
+                                                            <p class="fulljustify">Cuando se instala Supervisor se puede crear archivos de configuración  para que sean auto ejecutados al iniciar el sistema. Todo esto es configurado en el directorio <em>/etc/supervisor/conf.d<em>. para  dashborard.blackbox.org.ve crearemos un archivo llamado <em>/etc/supervisor/conf.d/dashboard.blackbox.org.ve.conf</em> con este contenido:</p>
+                                                                    <div class="meter midnight">
+                                                                        <span style="width: 100%"><span><code>[program:dashboard.blackbox.org.ve]</br>
+                                                                            command = /var/www/webapps/django/bin/gunicorn_start                    ; comando para iniciar la aplicación</br>
+                                                                            user = webappsusr                                                          ; Usuario que corre la aplicación</br>
+                                                                            stdout_logfile = /var/www/webapps/django/logs/gunicorn_supervisor.log   ; Donde los Log's serán depositados</br>
+                                                                            redirect_stderr = true                                                </br>
+                                                                            environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8</code></br></span></span>
+                                                                    </div>
+                                                                        <p>Crear el archivo para almacenar los LOG'S de la aplicación:</p>
+                                                                        <div class="meter midnight">
+                                                                            <span style="width: 100%"><span><code>webappsusr@blackbox:~$ mkdir -p /var/www/webapps/django/logs/</br>
+                                                                                        webappsusr@blackbox:~$ touch /var/www/webapps/django/logs/gunicorn_supervisor.log </code></br></span></span>
+                                                                        </div>
+                                                                        <p class="fulljustify">Después de guardar el archivo de configuración para el programa podemos pedir supervisor de volver a leer los archivos de configuración y de actualización </p>
+                                                                        <div class="meter midnight">
+                                                                            <span style="width: 100%"><span><code>$ sudo supervisorctl reread dashboard.blackbox.org.ve: available </br>
+                                                                                        $ sudo supervisorctl update dashboard.blackbox.org.ve: added process group </code></br></span></span>
+                                                                        </div>
+                                                                        <p class="fulljustify">La aplicación ahora debe iniciarse automáticamente después de un reinicio del sistema </p>                                                                                    
+                                                                        <li class="fulljustify"><b>Nginx:</b> Un servidor  web de alto rendimiento para la salida de la aplicación y sus archivos estáticos.</li></br>
+                                                                        <div class="meter midnight">
+                                                                            <span style="width: 100%"><span><code>$ sudo aptitude install nginx </br>
+                                                                                        $ sudo service nginx start</code></br></span></span>
+                                                                        </div>
+                                                                        <p class="fulljustify"> Crear una configuración de servidor virtual Nginx para Django. Cada servidor virtual Nginx debe ser descrito por un archivo en el directorio <em>/etc/nginx/sites-available</em>. Seleccionaremos los sitios que deseamos habilitar al hacer enlaces simbólicos a la carpeta  <em>/etc/nginx/sites-enabled.</em>                                                                                    Crear un nuevo archivo de configuración en  nginx para la aplicación Django ejecuta en black box.org.ve en /etc/nginx/sites-available/dashboard.blackbox.org.ve El archivo debe contener las siguientes líneas.</br>
+                                                                        <div class="meter midnight">
+                                                                            <span style="width: 100%"><span><code>$ sudo vim /etc/nginx/sites-avalable/dashboard.blackbox.org.ve</code></br>
 
-                                                                <li class="fulljustify"><b>Supervisor:</b> gunicorn_start script está listo y funcionando. Tenemos que asegurarnos de que se inicie automáticamente con el sistema y que se puede reiniciar automáticamente si por alguna razón se cierra inesperadamente. Estas tareas pueden ser fácilmente manejados por un servicio llamado supervisord. La instalación es sencilla:</li>
-                                                                <p><code>$ sudo aptitude install supervisor </code></p>
-
-                                                                <p class="fulljustify">Cuando se instala Supervisor se puede crear archivos de configuración  para que sean auto ejecutados al iniciar el sistema. Todo esto es configurado en el directorio <em>/etc/supervisor/conf.d<em>. para  dashborard.blackbox.org.ve crearemos un archivo llamado <em>/etc/supervisor/conf.d/dashboard.blackbox.org.ve.conf</em> con este contenido:
-
-                                                                            <p><code>[program:dashboard.blackbox.org.ve]</br>
-                                                                                command = /var/www/webapps/django/bin/gunicorn_start                    ; comando para iniciar la aplicación</br>
-                                                                                user = webappsusr                                                          ; Usuario que corre la aplicación</br>
-                                                                                stdout_logfile = /var/www/webapps/django/logs/gunicorn_supervisor.log   ; Donde los Log's serán depositados</br>
-                                                                                redirect_stderr = true                                                </br>
-                                                                                environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8</code></br></p>
-                                                                            <p>Crear el archivo para almacenar los LOG'S de la aplicación:</p>
-                                                                            <p><code>webappsusr@blackbox:~$ mkdir -p /var/www/webapps/django/logs/</br>
-                                                                                webappsusr@blackbox:~$ touch /var/www/webapps/django/logs/gunicorn_supervisor.log <code></br></p>
-                                                                            <p class="fulljustify">Después de guardar el archivo de configuración para el programa podemos pedir supervisor de volver a leer los archivos de configuración y de actualización </p>
-                                                                            <p><code>$ sudo supervisorctl reread dashboard.blackbox.org.ve: available </br>
-                                                                                $ sudo supervisorctl update dashboard.blackbox.org.ve: added process group </code></br></p>
-                                                                            <p class="fulljustify">La aplicación ahora debe iniciarse automáticamente después de un reinicio del sistema </p>                                                                                    
-                                                                            <li class="fulljustify"><b>Nginx:</b> Un servidor  web de alto rendimiento para la salida de la aplicación y sus archivos estáticos.</li></br>
-                                                                            <p><code>$ sudo aptitude install nginx </br>
-                                                                                 $ sudo service nginx start</code></br></p>
-                                                                            <p class="fulljustify"> Crear una configuración de servidor virtual Nginx para Django. Cada servidor virtual Nginx debe ser descrito por un archivo en el directorio <em>/etc/nginx/sites-available</em>. Seleccionaremos los sitios que deseamos habilitar al hacer enlaces simbólicos a la carpeta  <em>/etc/nginx/sites-enabled.</em>                                                                                    Crear un nuevo archivo de configuración en  nginx para la aplicación Django ejecuta en black box.org.ve en /etc/nginx/sites-available/dashboard.blackbox.org.ve El archivo debe contener las siguientes líneas.</br>
-                                                                            <p><code>$ sudo vim /etc/nginx/sites-avalable/dashboard.blackbox.org.ve</code></br>
-
-                                                                                <p><code>upstream dashboard.blackbox.org.ve {</br>
+                                                                                    <code>upstream dashboard.blackbox.org.ve {</br>
                                                                                         # fail_timeout=0 means we always retry an upstream even if it failed </br>
                                                                                         # to return a good HTTP response (in case the Unicorn master nukes a </br>
                                                                                         # single worker for timing out). </br>
@@ -332,11 +384,16 @@
                                                                                         location = /500.html {</br>
                                                                                         root /var/www/webapps/django/static/;</br>
                                                                                         }</br>
-                                                                                        }</br>
+                                                                                        }</code></br></span></span>
+                                                                            </div>
                                                                                         <p>Crear un enlace simbólico en el sites-enabled carpeta:</p>
-                                                                                        <p><code>$ sudo ln -s /etc/nginx/sites-available/dashboard.blackbox.org.ve /etc/nginx/sites-enabled/dashboard.blackbox.org.ve </code></br></p>
+                                                                                        <div class="meter midnight">
+                                                                                            <span style="width: 100%"><span><code>$ sudo ln -s /etc/nginx/sites-available/dashboard.blackbox.org.ve /etc/nginx/sites-enabled/dashboard.blackbox.org.ve </code></br></span></span>
+                                                                                        </div>
                                                                                         <p>Reiniciar Nginx: </p>
-                                                                                        <p><code> $ sudo service nginx restart </code></p>
+                                                                                        <div class="meter midnight">
+                                                                                            <span style="width: 100%"><span><code> $ sudo service nginx restart </code></span></span>
+                                                                                        </div>
                                             </ul>
                     </div>
 
@@ -350,10 +407,7 @@
                                         <a href="#justificacion">Justificación</a>
                                     </li>
                                     <li>
-                                        <a href="#Ogye">Objetivo general y Especifico</a>
-                                    </li>
-                                    <li>
-                                        <a href="#Ogye">Descripción Modular</a>
+                                        <a href="#implementacion">Implenentacion</a>
                                     </li>
                                 </ul>
                             </div>

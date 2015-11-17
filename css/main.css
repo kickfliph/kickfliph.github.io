@@ -524,10 +524,10 @@ body {width: 96%; margin: 0 auto} /* Center page without wrapper */
   -webkit-border-radius: 4px;
   border-radius: 4px;
 
-
   position: relative;
   overflow: hidden;
 }
+
 .meter > span  > span{
   margin-left: 4px;
   color: #fff;

@@ -509,7 +509,7 @@ body {width: 96%; margin: 0 auto} /* Center page without wrapper */
 
 /* Meters */
 .meter { 
-  height: 24px;  /* Can be anything */
+  height: auto;  /* Can be anything */
   position: relative;
   border: 1px solid #f1f1f1;
   -moz-border-radius: 4px;
@@ -529,7 +529,7 @@ body {width: 96%; margin: 0 auto} /* Center page without wrapper */
   overflow: hidden;
 }
 .meter > span  > span{
-  margin-left: 4px;
+  /*margin-left: 4px;*/
   color: #fff;
 }
 .meter > span:after, .animate > span > span {
