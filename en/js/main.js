@@ -1,42 +1,57 @@
-$(document).ready( function() {
+$(document).ready(function() {
+	// Header Scroll
+	$(window).on('scroll', function() {
+		var scroll = $(window).scrollTop();
 
-	// Logo
-	var $logo 	= $('#logo');
-	 if (location.href.indexOf("#") != -1) {
-        if(location.href.substr(location.href.indexOf("#"))!='#about'){
-        	$logo.show();
-        }
-    }
-    
-	// Show logo 
-	$('#tab-container .tab a').click(function() {
-	  $logo.slideDown('slow');
+		if (scroll >= 50) {
+			$('#header').addClass('fixed');
+		} else {
+			$('#header').removeClass('fixed');
+		}
 	});
-	// Hide logo
-	$('#tab-about').click(function() {
-	  $logo.slideUp('slow');
-	});	
-function animMeter(){
-    $(".meter > span").each(function() {
-                $(this)
-                    .data("origWidth", $(this).width())
-                    .width(0)
-                    .animate({
-                        width: $(this).data("origWidth")
-                    }, 1200);
-            });
-}
-animMeter();
 
-      $('#tab-container').easytabs({
-        animate			: true,
-        updateHash		: true,
-        transitionIn	: 'slideDown',
-        transitionOut	: 'slideUp',
-        animationSpeed	: 600,
-        tabActiveClass	: 'active'}).bind('easytabs:midTransition', function(event, $clicked, $targetPanel){
-            if($targetPanel.selector=='#resume'){
-                    animMeter();
-            }
-        });
-    });
+	// Fancybox
+	$('.work-box').fancybox();
+
+	// Flexslider
+	$('.flexslider').flexslider({
+		animation: "fade",
+		directionNav: false,
+	});
+
+	// Page Scroll
+	var sections = $('section')
+		nav = $('nav[role="navigation"]');
+
+	$(window).on('scroll', function () {
+	  	var cur_pos = $(this).scrollTop();
+	  	sections.each(function() {
+	    	var top = $(this).offset().top - 76
+	        	bottom = top + $(this).outerHeight();
+	    	if (cur_pos >= top && cur_pos <= bottom) {
+	      		nav.find('a').removeClass('active');
+	      		nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+	    	}
+	  	});
+	});
+	nav.find('a').on('click', function () {
+	  	var $el = $(this)
+	    	id = $el.attr('href');
+		$('html, body').animate({
+			scrollTop: $(id).offset().top - 75
+		}, 500);
+	  return false;
+	});
+
+	// Mobile Navigation
+	$('.nav-toggle').on('click', function() {
+		$(this).toggleClass('close-nav');
+		nav.toggleClass('open');
+		return false;
+	});	
+	nav.find('a').on('click', function() {
+		$('.nav-toggle').toggleClass('close-nav');
+		nav.toggleClass('open');
+	});
+	
+});
